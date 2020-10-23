@@ -11,6 +11,25 @@ const calculate = (state, btnName) => {
                 result: '',
                 string: '',
             }
+
+        if (btnName === '+/-' && state.number !== '') {
+            let nr = parseInt(state.number);
+            nr *= -1;
+            let obj;
+            state.result === '' ?
+                obj = {
+                    ...state,
+                    number: nr.toString(),
+                    string: nr.toString(),
+                }
+            :
+                obj = {
+                    ...state,
+                    number: nr.toString(),
+                    string: state.result + ' ' + state.operation + ' ' + nr.toString(),
+                }
+            return obj;
+        }
         // update the state.result with the result of the pretended operation
         if (state.result !== '' && state.number !== '') {
             const equals = operate(state.result, state.operation, state.number).toString();
