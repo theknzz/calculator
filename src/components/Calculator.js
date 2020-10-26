@@ -32,7 +32,7 @@ const Calculator = ( { update, result } ) => {
                 <Display value={result}/>
             </Wrapper>
             <Wrapper>
-                <ButtonWrapper state={result} handleClick={handleClick}/>
+                <ButtonWrapper className={'btnWrapper'} state={result} handleClick={handleClick}/>
             </Wrapper>
         </Container>
     );

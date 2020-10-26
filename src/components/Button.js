@@ -16,7 +16,11 @@ const Container = styled.button`
     : focus {
         outline: none;
     }
-    ${props => props.isDisabled ? 'opacity: 0.25;pointerEvents: disabled;' : 'opacity: 1; pointerEvents: initial;'}
+    ${props => props.isDisabled ? 'opacity: 0.25;pointerEvents: disabled;' : 'opacity: 1; pointerEvents: initial;'};
+    @media (max-width: 768px) {
+        padding: 6px;
+        margin: 2px;
+    }
 `
 
 const Button = ({ value, isLarge, onClick, isSpecial, isDisabled } ) => {

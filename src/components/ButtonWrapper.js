@@ -7,6 +7,9 @@ const Container = styled.div`
     width: 60%;
     flex: 0 1 auto;
     flex-flow: column wrap;
+    @media (max-width: 768px) {
+        width: 90%;
+    }
 `
 
 const Row = styled.div`

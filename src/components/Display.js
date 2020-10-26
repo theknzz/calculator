@@ -10,6 +10,11 @@ const Container = styled.div`
     -webkit-box-shadow: 10px 10px 26px -8px rgba(0,0,0,0.48);
     -moz-box-shadow: 10px 10px 26px -8px rgba(0,0,0,0.48);
     box-shadow: 10px 10px 26px -8px rgba(0,0,0,0.48);
+    margin-bottom: 20px;
+    @media (max-width: 768px) {
+        width: 90%;
+        margin-bottom: 20px;
+    }
 `
 
 const Wrapper = styled.div`
